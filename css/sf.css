@@ -4,31 +4,28 @@
 body {
   background: #4d4d4d;
   font-family: "Overpass";
-  padding: 0px;
-  margin: 0px;
-  padding-top: 2%;
-  padding-bottom: 2%; }
+  padding: 2% 0 2% 0;
+  margin: 0; }
 
 a {
   transition: color 0.5s ease; }
 
 #content {
   width: 50%;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 2% auto 2% auto;
   border-top: 5px solid #ccc;
   border-bottom: 5px solid #ccc;
-  margin-top: 2%;
-  margin-bottom: 2%;
-  padding: 0px; }
+  padding: 0; }
 
 header {
   background: #f9f9f9;
-  margin: 0px;
-  overflow: auto;
+  margin: 0;
   display: table;
   width: 100%;
   padding: 5% 15% 5% 15%; }
+
+header .image {
+  width: 55%; }
 
 header img {
   width: 250px;
@@ -42,7 +39,7 @@ header h1 {
 
 header .text {
   color: #666;
-  padding: 0px;
+  padding: 0;
   display: table-cell;
   vertical-align: middle; }
 
@@ -61,7 +58,7 @@ footer .uppercase {
   margin-top: 1.8em; }
 
 h1, h2, h3 {
-  margin-top: 0px; }
+  margin-top: 0; }
 
 #whatido {
   background: #aade87;
@@ -94,7 +91,6 @@ h1, h2, h3 {
 #sayhello {
   padding: 5% 15% 5% 15%;
   background: #87cdde;
-  overflow: auto;
   display: table;
   width: 100%; }
 
@@ -103,17 +99,14 @@ h1, h2, h3 {
   vertical-align: middle;
   width: 45%; }
 
-header .image {
-  width: 55%; }
-
 #sayhello h2 {
   display: inline;
   color: #006080;
   border-bottom: 1px solid #006080; }
 
 #sayhello ul {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   display: table-cell;
   vertical-align: middle; }
 
@@ -137,16 +130,16 @@ footer {
 
 footer h3 {
   display: inline-block;
-  color: #808080;
   border-bottom: 1px solid #808080; }
 
-footer .imprint {
-  float: left;
+footer div {
   width: 45%; }
 
+footer .imprint {
+  float: left; }
+
 footer .credits {
-  float: right;
-  width: 45%; }
+  float: right; }
 
 footer a {
   text-decoration: none;
@@ -161,9 +154,8 @@ footer a:hover {
 
 @media screen and (max-width: 800px) {
   body {
-    padding-top: 0;
-    padding-bottom: 0; }
-  header {
+    padding: 0; }
+  header, #sayhello {
     display: block; }
   header div {
     display: block; }
@@ -181,9 +173,8 @@ footer a:hover {
     margin-bottom: 7%; }
   #content {
     width: 100%;
-    margin-top: 0;
-    margin-bottom: 0;
-    border: 0px; }
+    margin: 0;
+    border: 0; }
   footer .imprint, footer .credits {
     float: none;
     width: 100%; }
