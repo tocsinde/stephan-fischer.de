@@ -7,9 +7,6 @@ body {
   padding: 2% 0 2% 0;
   margin: 0; }
 
-a {
-  transition: color 0.5s ease; }
-
 #content {
   width: 50%;
   margin: 2% auto 2% auto;
@@ -17,31 +14,11 @@ a {
   border-bottom: 5px solid #ccc;
   padding: 0; }
 
-header {
-  background: #f9f9f9;
-  margin: 0;
-  display: table;
-  width: 100%;
-  padding: 5% 15% 5% 15%; }
+a {
+  transition: color 0.5s ease; }
 
-header .image {
-  width: 55%; }
-
-header img {
-  width: 250px;
-  border-radius: 150px;
-  -webkit-border-radius: 150px;
-  -moz-border-radius: 150px;
-  vertical-align: middle; }
-
-header h1 {
-  color: #000; }
-
-header .text {
-  color: #666;
-  padding: 0;
-  display: table-cell;
-  vertical-align: middle; }
+h1, h2, h3 {
+  margin-top: 0; }
 
 .uppercase {
   margin-top: 0;
@@ -54,11 +31,33 @@ header .text {
 .uppercase i {
   margin-right: 0.5em; }
 
-footer .uppercase {
-  margin-top: 1.8em; }
+.tocsin {
+  font-family: "ChunkFive"; }
 
-h1, h2, h3 {
-  margin-top: 0; }
+header {
+  background: #f9f9f9;
+  margin: 0;
+  display: table;
+  width: 100%;
+  padding: 5% 15% 5% 15%; }
+
+header .image {
+  display: table-cell;
+  vertical-align: middle;
+  width: 45%; }
+header img {
+  width: 250px;
+  border-radius: 150px;
+  -webkit-border-radius: 150px;
+  -moz-border-radius: 150px;
+  vertical-align: middle; }
+header h1 {
+  color: #000; }
+header .text {
+  color: #666;
+  padding: 0;
+  display: table-cell;
+  vertical-align: middle; }
 
 #whatido {
   background: #aade87;
@@ -68,83 +67,73 @@ h1, h2, h3 {
   display: inline;
   color: #447821;
   border-bottom: 1px solid #447821; }
-
 #whatido ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
   margin-top: 5%; }
-
 #whatido ul li {
   vertical-align: top;
   display: inline-block;
-  margin-right: 10%; }
-
+  margin-right: 10%;
+  margin-top: 3%;
+  margin-bottom: 4%; }
 #whatido a {
   color: #447821;
   text-decoration: none;
   display: inline-block; }
-
 #whatido a:hover {
   color: #17280B; }
 
 #sayhello {
-  padding: 5% 15% 5% 15%;
   background: #87cdde;
+  padding: 5% 15% 5% 15%;
   display: table;
   width: 100%; }
 
-#sayhello div, header .image {
+#sayhello div {
   display: table-cell;
   vertical-align: middle;
   width: 45%; }
-
 #sayhello h2 {
   display: inline;
   color: #006080;
   border-bottom: 1px solid #006080; }
-
 #sayhello ul {
   margin: 0;
   padding: 0;
   display: table-cell;
   vertical-align: middle; }
-
 #sayhello ul li {
   display: block;
   margin-bottom: 7%; }
-
 #sayhello a {
   color: #006080;
   text-decoration: none;
   display: inline-block; }
-
 #sayhello a:hover {
   color: #00222B; }
 
 footer {
-  padding: 5% 15% 5% 15%;
   background: #f9f9f9;
+  padding: 5% 15% 5% 15%;
   overflow: auto;
   color: #808080; }
 
 footer h3 {
   display: inline-block;
   border-bottom: 1px solid #808080; }
-
 footer div {
   width: 45%; }
-
 footer .imprint {
   float: left; }
-
 footer .credits {
   float: right; }
-
+footer .uppercase {
+  margin-top: 1.8em; }
 footer a {
   text-decoration: none;
   color: #00aad4; }
-
 footer a:hover {
   color: #006080; }
 
@@ -155,19 +144,15 @@ footer a:hover {
 @media screen and (max-width: 800px) {
   body {
     padding: 0; }
-  header, #sayhello {
-    display: block; }
-  header div {
-    display: block; }
+  header, #sayhello, header div, #sayhello div {
+    display: block;
+    width: auto; }
   header img {
     width: 150px; }
   header .text, #sayhello ul, #whatido ul {
     display: block;
     margin-top: 10%;
     float: none; }
-  #sayhello div {
-    display: block;
-    width: auto; }
   #whatido ul li {
     display: block;
     margin-bottom: 7%; }

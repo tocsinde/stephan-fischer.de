@@ -1,0 +1,267 @@
+// basic variables
+$background: #4d4d4d;
+$whatido_bg: #aade87;
+$whatido_text: #447821;
+$sayhello_bg: #87cdde;
+$sayhello_text: #006080;
+$content_width: 50%;
+$box_padding: 5% 15% 5% 15%;
+
+
+// basic function for box backgrounds
+@mixin box($bg) {
+  background: $bg;
+  padding: $box_padding;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: $background;
+  font-family: "Overpass";
+  padding: 2% 0 2% 0;
+  margin: 0;
+}
+
+#content {
+  width: $content_width;
+  margin: 2% auto 2% auto;
+  border-top: 5px solid #ccc;
+  border-bottom: 5px solid #ccc;
+  padding: 0;
+}
+
+a {
+  transition: color 0.5s ease;
+}
+
+h1, h2, h3 {
+  margin-top: 0;
+}
+
+.uppercase {
+  margin-top: 0;
+  font-weight: bold;
+  font-size: 0.8em;
+  line-height: 1em;
+  margin-bottom: 0.3em;
+  text-transform: uppercase;
+}
+
+.uppercase i {
+  margin-right: 0.5em;
+}
+
+.tocsin {
+  font-family: "ChunkFive";
+}
+
+header {
+  background: #f9f9f9;
+  margin: 0;
+  display: table;
+  width: 100%;
+  padding: $box_padding;
+}
+
+header {
+
+  .image {
+    display: table-cell;
+    vertical-align: middle;
+    width: 45%;
+  }
+
+  img {
+    width: 250px;
+    border-radius: 150px;
+    -webkit-border-radius: 150px;
+    -moz-border-radius: 150px;
+    vertical-align: middle;
+  }
+
+  h1 {
+    color: #000;
+  }
+
+  .text {
+    color: #666;
+    padding: 0;
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+}
+
+#whatido {
+  @include box($whatido_bg);
+}
+
+#whatido {
+  h2 {
+    display: inline;
+    color: $whatido_text;
+    border-bottom: 1px solid $whatido_text;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    margin-top: 5%;
+  }
+
+  ul li {
+    vertical-align: top;
+    display: inline-block;
+    margin-right: 10%;
+    margin-top:3%;
+    margin-bottom: 4%;
+  }
+
+  a {
+    color: $whatido_text;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  a:hover {
+    color: #17280B
+  }
+}
+
+#sayhello {
+  @include box($sayhello_bg);
+  display: table;
+  width: 100%;
+}
+
+#sayhello {
+
+  div {
+    display: table-cell;
+    vertical-align: middle;
+    width: 45%;
+  }
+
+  h2 {
+    display: inline;
+    color: $sayhello_text;
+    border-bottom: 1px solid $sayhello_text;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  ul li {
+    display: block;
+    margin-bottom: 7%;
+  }
+
+  a {
+    color: #006080;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  a:hover {
+    color: #00222B;
+  }
+}
+
+footer {
+  @include box(#f9f9f9);
+  overflow: auto;
+  color: #808080;
+}
+
+footer {
+
+  h3 {
+    display: inline-block;
+    border-bottom: 1px solid #808080;
+  }
+
+  div {
+    width: 45%;
+  }
+
+  .imprint {
+    float: left;
+  }
+
+  .credits {
+    float: right;
+  }
+
+  .uppercase {
+    margin-top: 1.8em;
+  }
+
+  a {
+    text-decoration: none;
+    color: #00aad4;
+  }
+
+  a:hover {
+    color: #006080;
+  }
+
+}
+
+
+@media screen and (max-width: 1024px) {
+  $content_width: 80%;
+  #content {
+    width: $content_width;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  $content_width: 100%;
+
+  body {
+    padding: 0;
+  }
+
+  header, #sayhello, header div, #sayhello div {
+    display: block;
+    width: auto;
+  }
+
+  header img {
+    width: 150px;
+  }
+
+  header .text, #sayhello ul, #whatido ul {
+    display: block;
+    margin-top: 10%;
+    float: none;
+  }
+
+  #whatido ul li {
+    display: block;
+    margin-bottom: 7%;
+  }
+
+  #content {
+    width: $content_width;
+    margin: 0;
+    border: 0;
+  }
+
+  footer .imprint, footer .credits {
+    float: none;
+    width: 100%;
+  }
+
+  footer .imprint {
+    margin-bottom: 10%;
+  }
+}
