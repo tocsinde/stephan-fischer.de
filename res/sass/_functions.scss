@@ -1,0 +1,14 @@
+// basic function for fonts
+@mixin font($font, $style, $filename, $weight) {
+  font-family: "#{$font}";
+  font-style: $style;
+  font-weight: $weight;
+  text-rendering: optimizeLegibility;
+
+  src: url("../fonts/#{$font}/#{$filename}.eot");
+  src:
+    url("../fonts/#{$font}/#{$filename}.eot?##{$font}") format("embedded-opentype"),
+    url("../fonts/#{$font}/#{$filename}.woff") format("woff"),
+    url("../fonts/#{$font}/#{$filename}.ttf") format("truetype"),
+    url("../fonts/#{$font}/#{$filename}.svg##{$font}") format("svg");
+}

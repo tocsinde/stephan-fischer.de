@@ -1,3 +1,5 @@
+@import "functions";
+
 // basic variables
 $background: #4d4d4d;
 $whatido_bg: #aade87;
@@ -7,52 +9,24 @@ $sayhello_text: #006080;
 $content_width: 50%;
 $box_padding: 5% 15% 5% 15%;
 
-// font: Overpass (bold + light)
-@font-face {
-  src: url("../fonts/overpass/Overpass-Bold.eot");
-  font-family: "Overpass";
-  src:
-    url("../fonts/overpass/Overpass-Bold.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/overpass/Overpass-Bold.woff") format("woff"),
-    url("../fonts/overpass/Overpass-Bold.ttf") format("truetype"),
-    url("../fonts/overpass/Overpass-Bold.svg#Overpass-Bold") format("svg");
-  font-style: normal;
-  font-weight: 700;
-  text-rendering: optimizeLegibility;
-}
-
-@font-face {
-  src: url("../fonts/overpass/Overpass-Light.eot");
-  font-family: "Overpass";
-  src:
-    url("../fonts/overpass/Overpass-Light.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/overpass/Overpass-Light.woff") format("woff"),
-    url("../fonts/overpass/Overpass-Light.ttf") format("truetype"),
-    url("../fonts/overpass/Overpass-Light.svg#Overpass-Light") format("svg");
-  font-style: normal;
-  font-weight: 400;
-  text-rendering: optimizeLegibility;
-}
-
-// font: ChunkFive
-@font-face {
-  src: url("../fonts/chunkfive/chunkfive-webfont.eot");
-  font-family: "ChunkFive";
-  src:
-    url("../fonts/chunkfive/chunkfive-webfont.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/chunkfive/chunkfive-webfont.woff") format("woff"),
-    url("../fonts/chunkfive/chunkfive-webfont.ttf") format("truetype"),
-    url("../fonts/chunkfive/chunkfive-webfont.svg") format("svg");
-  font-style: normal;
-  font-weight: 700;
-  text-rendering: optimizeLegibility;
-}
-
-
 // basic function for box backgrounds
 @mixin box($bg) {
   background: $bg;
   padding: $box_padding;
+}
+
+// include font files
+
+@font-face {
+  @include font(Overpass, normal, overpass-light, 400);
+}
+
+@font-face {
+  @include font(Overpass, bold, overpass-bold, 700);
+}
+
+@font-face {
+  @include font(ChunkFive, normal, chunkfive-webfont, 700);
 }
 
 * {
@@ -91,10 +65,11 @@ h1, h2, h3 {
   line-height: 1em;
   margin-bottom: 0.3em;
   text-transform: uppercase;
-}
 
-.uppercase i {
-  margin-right: 0.5em;
+  i {
+    margin-right: 0.5em;
+  }
+
 }
 
 .tocsin {
@@ -107,9 +82,6 @@ header {
   display: table;
   width: 100%;
   padding: $box_padding;
-}
-
-header {
 
   .image {
     display: table-cell;
@@ -140,9 +112,7 @@ header {
 
 #whatido {
   @include box($whatido_bg);
-}
 
-#whatido {
   h2 {
     display: inline;
     color: $whatido_text;
@@ -150,18 +120,15 @@ header {
   }
 
   ul {
-    margin: 0;
+    margin: 5% 0 0 0;
     padding: 0;
     list-style-type: none;
-    margin-top: 5%;
-  }
 
-  ul li {
-    vertical-align: top;
-    display: inline-block;
-    margin-right: 10%;
-    margin-top:3%;
-    margin-bottom: 4%;
+    li {
+      vertical-align: top;
+      display: inline-block;
+      margin: 3% 10% 4% 0;
+    }
   }
 
   a {
@@ -171,7 +138,7 @@ header {
   }
 
   a:hover {
-    color: #17280B
+    color: #17280B;
   }
 }
 
@@ -179,9 +146,6 @@ header {
   @include box($sayhello_bg);
   display: table;
   width: 100%;
-}
-
-#sayhello {
 
   div {
     display: table-cell;
@@ -200,11 +164,11 @@ header {
     padding: 0;
     display: table-cell;
     vertical-align: middle;
-  }
 
-  ul li {
-    display: block;
-    margin-bottom: 7%;
+    li {
+      display: block;
+      margin-bottom: 7%;
+    }
   }
 
   a {
@@ -222,9 +186,6 @@ footer {
   @include box(#f9f9f9);
   overflow: auto;
   color: #808080;
-}
-
-footer {
 
   h3 {
     display: inline-block;

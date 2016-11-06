@@ -1,28 +1,28 @@
 @font-face {
-  src: url("../fonts/overpass/Overpass-Bold.eot");
   font-family: "Overpass";
-  src: url("../fonts/overpass/Overpass-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/overpass/Overpass-Bold.woff") format("woff"), url("../fonts/overpass/Overpass-Bold.ttf") format("truetype"), url("../fonts/overpass/Overpass-Bold.svg#Overpass-Bold") format("svg");
-  font-style: normal;
-  font-weight: 700;
-  text-rendering: optimizeLegibility;
-}
-
-@font-face {
-  src: url("../fonts/overpass/Overpass-Light.eot");
-  font-family: "Overpass";
-  src: url("../fonts/overpass/Overpass-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/overpass/Overpass-Light.woff") format("woff"), url("../fonts/overpass/Overpass-Light.ttf") format("truetype"), url("../fonts/overpass/Overpass-Light.svg#Overpass-Light") format("svg");
   font-style: normal;
   font-weight: 400;
   text-rendering: optimizeLegibility;
+  src: url("../fonts/Overpass/overpass-light.eot");
+  src: url("../fonts/Overpass/overpass-light.eot?#Overpass") format("embedded-opentype"), url("../fonts/Overpass/overpass-light.woff") format("woff"), url("../fonts/Overpass/overpass-light.ttf") format("truetype"), url("../fonts/Overpass/overpass-light.svg#Overpass") format("svg");
 }
 
 @font-face {
-  src: url("../fonts/chunkfive/chunkfive-webfont.eot");
+  font-family: "Overpass";
+  font-style: bold;
+  font-weight: 700;
+  text-rendering: optimizeLegibility;
+  src: url("../fonts/Overpass/overpass-bold.eot");
+  src: url("../fonts/Overpass/overpass-bold.eot?#Overpass") format("embedded-opentype"), url("../fonts/Overpass/overpass-bold.woff") format("woff"), url("../fonts/Overpass/overpass-bold.ttf") format("truetype"), url("../fonts/Overpass/overpass-bold.svg#Overpass") format("svg");
+}
+
+@font-face {
   font-family: "ChunkFive";
-  src: url("../fonts/chunkfive/chunkfive-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/chunkfive/chunkfive-webfont.woff") format("woff"), url("../fonts/chunkfive/chunkfive-webfont.ttf") format("truetype"), url("../fonts/chunkfive/chunkfive-webfont.svg") format("svg");
   font-style: normal;
   font-weight: 700;
   text-rendering: optimizeLegibility;
+  src: url("../fonts/ChunkFive/chunkfive-webfont.eot");
+  src: url("../fonts/ChunkFive/chunkfive-webfont.eot?#ChunkFive") format("embedded-opentype"), url("../fonts/ChunkFive/chunkfive-webfont.woff") format("woff"), url("../fonts/ChunkFive/chunkfive-webfont.ttf") format("truetype"), url("../fonts/ChunkFive/chunkfive-webfont.svg#ChunkFive") format("svg");
 }
 
 * {
@@ -116,18 +116,15 @@ header .text {
 }
 
 #whatido ul {
-  margin: 0;
+  margin: 5% 0 0 0;
   padding: 0;
   list-style-type: none;
-  margin-top: 5%;
 }
 
 #whatido ul li {
   vertical-align: top;
   display: inline-block;
-  margin-right: 10%;
-  margin-top: 3%;
-  margin-bottom: 4%;
+  margin: 3% 10% 4% 0;
 }
 
 #whatido a {
