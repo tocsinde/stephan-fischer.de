@@ -2,12 +2,20 @@
 
 // basic variables
 $background: #4d4d4d;
+$content_width: 50%;
+$box_padding: 5% 15% 5% 15%;
+
 $whatido_bg: #aade87;
 $whatido_text: #447821;
 $sayhello_bg: #87cdde;
 $sayhello_text: #006080;
-$content_width: 50%;
-$box_padding: 5% 15% 5% 15%;
+
+$gray1_bg: #ececec;
+$gray1_text: #808080;
+
+$gray2_bg: #ccc;
+$gray2_text: #666;
+
 
 // basic function for box backgrounds
 @mixin box($bg) {
@@ -47,7 +55,6 @@ body {
   border-top: 5px solid #ccc;
   border-bottom: 5px solid #ccc;
   padding: 0;
-  display: table;
 }
 
 a {
@@ -59,7 +66,6 @@ h1, h2, h3 {
 }
 
 .uppercase {
-  margin-top: 0;
   font-weight: bold;
   font-size: 0.8em;
   line-height: 1em;
@@ -72,21 +78,16 @@ h1, h2, h3 {
 
 }
 
-.tocsin {
-  font-family: "ChunkFive";
-}
-
 header {
   background: #f9f9f9;
   margin: 0;
-  display: table;
   width: 100%;
   padding: $box_padding;
+  display: flex;
+  align-items: center;
 
   .image {
-    display: table-cell;
-    vertical-align: middle;
-    width: 45%;
+    width: 50%;
   }
 
   img {
@@ -94,18 +95,14 @@ header {
     border-radius: 150px;
     -webkit-border-radius: 150px;
     -moz-border-radius: 150px;
-    vertical-align: middle;
   }
 
   h1 {
     color: #000;
   }
 
-  .text {
+  .text, a {
     color: #666;
-    padding: 0;
-    display: table-cell;
-    vertical-align: middle;
   }
 
 }
@@ -120,15 +117,11 @@ header {
   }
 
   ul {
-    margin: 5% 0 0 0;
+    margin: 8% 0 4% 0;
     padding: 0;
     list-style-type: none;
-
-    li {
-      vertical-align: top;
-      display: inline-block;
-      margin: 3% 10% 4% 0;
-    }
+    display: flex;
+    justify-content: space-between;
   }
 
   a {
@@ -144,12 +137,10 @@ header {
 
 #sayhello {
   @include box($sayhello_bg);
-  display: table;
-  width: 100%;
+  display: flex;
+  align-items: center;
 
   div {
-    display: table-cell;
-    vertical-align: middle;
     width: 45%;
   }
 
@@ -162,17 +153,18 @@ header {
   ul {
     margin: 0;
     padding: 0;
-    display: table-cell;
-    vertical-align: middle;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
 
     li {
-      display: block;
-      margin-bottom: 7%;
+      margin: 8% 0 4% 0;
+      flex-basis: 60px;
     }
   }
 
   a {
-    color: #006080;
+    color: $sayhello_text;
     text-decoration: none;
     display: inline-block;
   }
@@ -182,30 +174,44 @@ header {
   }
 }
 
+.gray1 {
+  @include box($gray1_bg);
+  color: $gray1_text;
+  text-align: justify;
+
+  a {
+    color: $gray1_text;
+  }
+}
+
+.gray2 {
+  @include box($gray2_bg);
+  color: $gray2_text;
+  text-align: justify;
+
+  a {
+    color: $gray2_text;
+  }
+}
+
 footer {
   @include box(#f9f9f9);
-  overflow: auto;
   color: #808080;
+  display: flex;
+  flex-flow: row wrap;
 
   h3 {
     display: inline-block;
     border-bottom: 1px solid #808080;
+    margin-bottom: 0.5em;
   }
 
   div {
-    width: 45%;
-  }
-
-  .imprint {
-    float: left;
-  }
-
-  .credits {
-    float: right;
+    flex-basis: 50%;
   }
 
   .uppercase {
-    margin-top: 1.8em;
+    margin-top: 1.5em;
   }
 
   a {
@@ -217,6 +223,15 @@ footer {
     color: #006080;
   }
 
+  .tocsin {
+  font-family: "ChunkFive";
+  }
+
+}
+
+iframe {
+  border: 0;
+  width: 100%;
 }
 
 
@@ -246,7 +261,6 @@ footer {
   header .text, #sayhello ul, #whatido ul {
     display: block;
     margin-top: 10%;
-    float: none;
   }
 
   #whatido ul li {
@@ -260,12 +274,11 @@ footer {
     border: 0;
   }
 
-  footer .imprint, footer .credits {
-    float: none;
-    width: 100%;
+  footer {
+    display: block;
   }
 
-  footer .imprint {
-    margin-bottom: 10%;
+  footer div {
+    margin-bottom: 7%;
   }
 }
