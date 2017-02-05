@@ -117,7 +117,7 @@ header {
   }
 
   ul {
-    margin: 8% 0 4% 0;
+    margin: 5% 0 4% 0;
     padding: 0;
     list-style-type: none;
     display: flex;
@@ -158,7 +158,7 @@ header {
     flex-direction: column;
 
     li {
-      margin: 8% 0 4% 0;
+      margin: 5% 0 4% 0;
       flex-basis: 60px;
     }
   }
@@ -263,8 +263,11 @@ iframe {
     margin-top: 10%;
   }
 
-  #whatido ul li {
+  #whatido ul {
     display: block;
+  }
+
+  #whatido ul li {
     margin-bottom: 7%;
   }
 

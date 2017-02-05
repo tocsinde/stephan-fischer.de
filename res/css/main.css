@@ -81,7 +81,7 @@ header {
     color: #447821;
     border-bottom: 1px solid #447821; }
   #whatido ul {
-    margin: 8% 0 4% 0;
+    margin: 5% 0 4% 0;
     padding: 0;
     list-style-type: none;
     display: flex;
@@ -111,7 +111,7 @@ header {
     display: flex;
     flex-direction: column; }
     #sayhello ul li {
-      margin: 8% 0 4% 0;
+      margin: 5% 0 4% 0;
       flex-basis: 60px; }
   #sayhello a {
     color: #006080;
@@ -177,8 +177,9 @@ iframe {
   header .text, #sayhello ul, #whatido ul {
     display: block;
     margin-top: 10%; }
+  #whatido ul {
+    display: block; }
   #whatido ul li {
-    display: block;
     margin-bottom: 7%; }
   #content {
     width: 100%;
