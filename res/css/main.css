@@ -1,28 +1,17 @@
 @font-face {
-  font-family: "Overpass";
+  src: url("../fonts/overpass/overpass-light.eot");
+  font-family: overpass;
+  src: local("Overpass Light"), local("Overpass-Light"), url("../fonts/overpass/overpass-light.eot?#overpass") format("embedded-opentype"), url("../fonts/overpass/overpass-light.woff") format("woff"), url("../fonts/overpass/overpass-light.woff2") format("woff2"), url("../fonts/overpass/overpass-light.ttf") format("truetype");
   font-style: normal;
   font-weight: 400;
-  text-rendering: optimizeLegibility;
-  src: url("../fonts/Overpass/overpass-light.eot");
-  src: url("../fonts/Overpass/overpass-light.eot?#Overpass") format("embedded-opentype"), url("../fonts/Overpass/overpass-light.woff") format("woff"), url("../fonts/Overpass/overpass-light.ttf") format("truetype"), url("../fonts/Overpass/overpass-light.svg#Overpass") format("svg");
 }
 
 @font-face {
-  font-family: "Overpass";
-  font-style: bold;
-  font-weight: 700;
-  text-rendering: optimizeLegibility;
-  src: url("../fonts/Overpass/overpass-bold.eot");
-  src: url("../fonts/Overpass/overpass-bold.eot?#Overpass") format("embedded-opentype"), url("../fonts/Overpass/overpass-bold.woff") format("woff"), url("../fonts/Overpass/overpass-bold.ttf") format("truetype"), url("../fonts/Overpass/overpass-bold.svg#Overpass") format("svg");
-}
-
-@font-face {
-  font-family: "ChunkFive";
+  src: url("../fonts/overpass/overpass-bold.eot");
+  font-family: overpass;
+  src: local("Overpass Bold"), local("Overpass-Bold"), url("../fonts/overpass/overpass-bold.eot?#overpass") format("embedded-opentype"), url("../fonts/overpass/overpass-bold.woff") format("woff"), url("../fonts/overpass/overpass-bold.woff2") format("woff2"), url("../fonts/overpass/overpass-bold.ttf") format("truetype");
   font-style: normal;
   font-weight: 700;
-  text-rendering: optimizeLegibility;
-  src: url("../fonts/ChunkFive/chunkfive-webfont.eot");
-  src: url("../fonts/ChunkFive/chunkfive-webfont.eot?#ChunkFive") format("embedded-opentype"), url("../fonts/ChunkFive/chunkfive-webfont.woff") format("woff"), url("../fonts/ChunkFive/chunkfive-webfont.ttf") format("truetype"), url("../fonts/ChunkFive/chunkfive-webfont.svg#ChunkFive") format("svg");
 }
 
 * {
@@ -31,7 +20,7 @@
 
 body {
   background: #4d4d4d;
-  font-family: "Overpass", sans-serif;
+  font-family: "overpass", sans-serif;
   font-weight: 400;
   padding: 2% 0 2% 0;
   margin: 0;
@@ -216,8 +205,14 @@ footer a:hover {
   color: #006080;
 }
 
+footer .tocsinlogo {
+  vertical-align: middle;
+  max-width: 30px;
+  margin-right: 5px;
+}
+
 footer .tocsin {
-  font-family: "ChunkFive";
+  font-weight: bold;
 }
 
 iframe {
